@@ -1,6 +1,6 @@
-# 🌐 Personal Portfolio
+# 🌐 Portfolio Personal
 
-Portfolio personal. El objetivo de este sitio web es centralizar mi experiencia, competencias técnicas y proyectos, mostrando no solo el resultado final, sino también las decisiones de diseño y el aprendizaje adquirido durante cada desarrollo.
+El objetivo de este sitio web es centralizar mi experiencia, competencias técnicas y proyectos, mostrando no solo el resultado final, sino también las decisiones de diseño y el aprendizaje adquirido durante cada desarrollo.
 
 ## 🚀 Tecnologías utilizadas
 
