@@ -11,17 +11,22 @@ El objetivo de este sitio web es centralizar mi experiencia, competencias técni
 ## 📂 Estructura del proyecto
 
 ```
-astro-portfolio/
+gloria-portfolio/
 │
 ├── src/
-│   ├── pages/          → index, sobre-mi, proyectos/[slug]
-│   ├── layouts/         → layout compartido (nav, footer)
-│   ├── components/      → tarjetas de proyecto, tags, badges...
-│   ├── content/          → proyectos/ y sobre-mi/ (Markdown)
-│   ├── data/             → site.json, roadmap.json
-│   └── styles/           → tema daisyUI y estilos globales
-├── public/                → CV descargable, favicon
-└── .github/workflows/      → despliegue automático a GitHub Pages
+│   ├── pages/              → index, sobre-mi, proyectos/ (index + [...slug])
+│   ├── layouts/             → layout compartido (nav, footer, Google Analytics)
+│   ├── components/          → tarjetas de proyecto, tags, badges, GoogleAnalytics...
+│   ├── content/               → proyectos/ y sobre-mi/ (Markdown)
+│   ├── assets/proyectos/       → imágenes estáticas del cuerpo de cada caso de estudio
+│   ├── data/                     → site.json
+│   ├── lib/                       → analytics.ts (helpers de tracking)
+│   └── styles/                     → tema daisyUI y estilos globales
+├── public/
+│   ├── assets/                → CV descargable
+│   ├── favicon.svg
+│   └── proyectos/<slug>/        → memoria.pdf y animaciones grandes de cada proyecto
+└── .github/workflows/            → despliegue automático a GitHub Pages
 ```
 
 ## ✨ Funcionalidades
@@ -45,27 +50,20 @@ astro-portfolio/
 
 ## 🎯 Objetivo
 
-Este portfolio evoluciona junto con mi formación y experiencia.
+Este portfolio continuará evolucionando. Cada proyecto nace para profundizar en una tecnología o resolver un problema concreto. El objetivo es comprender cómo y por qué utilizar cada herramienta, documentando el proceso de aprendizaje y las decisiones técnicas adoptadas durante el desarrollo.
 
-Cada proyecto publicado representa una competencia técnica adquirida y documenta tanto la solución implementada como las decisiones de diseño y los aprendizajes obtenidos durante el desarrollo.
+## ⚙️ Ingeniería del portfolio
 
-## 🔜 Próximas incorporaciones
+El portfolio no solo documenta proyectos; también documenta cómo se documentan.
 
-- Proyectos de Data Engineering
-- Machine Learning y Deep Learning
-- Arquitecturas Cloud
-- MLOps y MLflow
-- Procesamiento distribuido con Spark
-- Streaming con Kafka
-- Orquestación con Airflow
+Para evitar inconsistencias entre proyectos se ha diseñado un flujo reproducible que separa:
 
-## 💡 Filosofía del portfolio
+- generación de la memoria técnica;
+- generación de la página web;
+- revisión editorial;
+- publicación.
 
-No pretendo crear una colección de proyectos aislados.
-
-Cada proyecto nace para profundizar en una tecnología o resolver un problema concreto. El objetivo es comprender cómo y por qué utilizar cada herramienta, documentando el proceso de aprendizaje y las decisiones técnicas adoptadas durante el desarrollo.
-
-Más que mostrar tecnologías, este portfolio refleja mi evolución como ingeniera.
+Este enfoque permite mantener una única fuente de verdad para el contenido y reutilizar el mismo proceso en cualquier proyecto futuro.
 
 ## 📬 Contacto
 
