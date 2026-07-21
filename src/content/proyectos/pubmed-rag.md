@@ -33,7 +33,7 @@ El corpus combina dos fuentes de NCBI con responsabilidades distintas: PubMed ap
 
 *Interfaz web y API como entrada única, bifurcada en flujo de consulta y gestión del corpus, convergiendo en Qdrant y en el proveedor LLM activo.*
 
-El flujo de consulta clasifica primero la pregunta del usuario — resumen temático, artículo concreto, comparación transversal o fuera de dominio — y esa clasificación decide tanto el filtro sobre Qdrant como la técnica de recuperación: abstracts de PubMed para una visión general, texto completo de PMC con MMR para maximizar diversidad entre papers, o resolución directa del artículo cuando la pregunta apunta a uno concreto. El contexto recuperado se numera y se pasa a un LLM con un prompt que impone grounding explícito: ninguna afirmación puede aparecer sin una fuente numerada que la respalde.
+El flujo de consulta clasifica primero la pregunta del usuario — resumen temático, artículo concreto, comparación transversal o fuera de dominio — y esa clasificación decide tanto el filtro sobre Qdrant como la técnica de recuperación: abstracts de PubMed para una visión general, texto completo de PubMed Central con MMR (Maximum Marginal Relevance) para maximizar diversidad entre papers, o resolución directa del artículo cuando la pregunta apunta a uno concreto. El contexto recuperado se numera y se pasa a un LLM con un prompt que impone grounding explícito: ninguna afirmación puede aparecer sin una fuente numerada que la respalde.
 
 ## Casos de uso
 
